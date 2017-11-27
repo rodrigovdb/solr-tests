@@ -28,7 +28,7 @@ $ docker exec -i -t solr-local bash
 
 ## Exercise #1
 
-[Exercise 1](from http://lucene.apache.org/solr/guide/7_1/solr-tutorial.html#exercise-1)
+[Exercise 1](http://lucene.apache.org/solr/guide/7_1/solr-tutorial.html#exercise-1)
 ```
 $ bin/solr start -e cloud
 ```
