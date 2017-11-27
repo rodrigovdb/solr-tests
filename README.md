@@ -28,7 +28,7 @@ $ docker exec -i -t solr-local bash
 
 ## Exercise #1
 
-(Exercise 1)[from http://lucene.apache.org/solr/guide/7_1/solr-tutorial.html#exercise-1]
+[Exercise 1](from http://lucene.apache.org/solr/guide/7_1/solr-tutorial.html#exercise-1)
 ```
 $ bin/solr start -e cloud
 ```
@@ -79,33 +79,6 @@ $ curl "http://localhost:8984/solr/techproducts/select?q=%2Belectronics%20-music
 ```
 
 More about search: http://lucene.apache.org/solr/guide/7_1/searching.html#searching
-
-# Using solr-system project
-
-Using a docker container
-```
-$ docker-compose up -d --build
-```
-
-Loading stuffs
-```
-$ docker-compose exec solr bin/post -c compositions /sample/compositions.json
-```
-
-## Exercise #1
-
-[Exercise 1](http://lucene.apache.org/solr/guide/7_1/solr-tutorial.html#exercise-1)
-```
-$ docker-compose exec solr bin/solr start -e cloud
-```
-and chose:
-* 2 (number of nodes)
-* 8984 (port of node1)
-* 7574 (port of node2)
-* techproducts (name of new collection)
-* 2 (number of chards)
-* 2 (number of replicas)
-* `sample_techproducts_configs` (configuration for the techproducts collection)
 
 ## Exercise #2
 [Exercise 2](http://lucene.apache.org/solr/guide/7_1/solr-tutorial.html#exercise-2)
