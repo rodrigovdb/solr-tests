@@ -1,0 +1,23 @@
+version: '3'
+services:
+  postgres:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER:      desenv
+      POSTGRES_PASSWORD:  rapadura
+      POSTGRES_DB:        onstage
+  pgadmin:
+    image: fenglc/pgadmin4
+    ports:
+      - 5000:5000
+    links:
+      - postgres
+    environment:
+      DEFAULT_USER:     desenv
+      DEFAULT_PASSWORD: rapadura
+    volumes:
+      - ./:/data/
+networks:
+  pg:
